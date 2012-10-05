@@ -1,0 +1,16 @@
+inherit python-distutils
+
+NAME="python-boto"
+VERSION=2.6.0
+RELEASE=1
+CATEGORY="Python"
+SUMMARY="Python interface for AWS and other clouds"
+DESCRIPTION="Boto is a Python package that provides interfaces to many
+components of Amazon Web Services. In addition, boto provides support
+for other public services such as Google Storage in addition to private
+cloud systems like Eucalyptus, OpenStack and Open Nebula."
+HOMEPAGE="https://github.com/boto/boto"
+SRC_URI="https://github.com/downloads/boto/boto/boto-${VERSION}.tar.gz"
+SRC_DIR="boto-${VERSION}"
+
+DOCS="Changelog.rst README.rst"
