@@ -1,7 +1,7 @@
-inherit python-distutils
+inherit python-wheel
 
 NAME="python-boto"
-VERSION=2.38.0
+VERSION=2.46.1
 RELEASE=1
 CATEGORY="Python"
 SUMMARY="Python interface for AWS and other clouds"
@@ -10,6 +10,13 @@ components of Amazon Web Services. In addition, boto provides support
 for other public services such as Google Storage in addition to private
 cloud systems like Eucalyptus, OpenStack and Open Nebula."
 
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/rpms/python-boto.git/plain/boto-2.39.0-devendor.patch
+"
+
 ARCH=noarch
 
-DOCS="Changelog.rst README.rst"
+python2_boto_REQUIRES="python2-rsa python2-six"
+python3_boto_REQUIRES="python2-rsa python3-six"
+# These are treated by Fedora as examples only
+PKG_IGNORE="usr/bin/"
